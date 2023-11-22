@@ -16,7 +16,25 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+}) -> name('xInicio');
+
+////////////////////////AGREGUE////////////////////////
+
+Route::get('/saludo', function () {
+    return "Hola mundo soy Nika desde LARAVEL ...";
 });
+
+Route::get('/galeria/{numero}', function ($numero) {
+    return "Codigo de foto: ".$numero;
+}) -> where('numero','[0-9]+'); //corchetes expresiones regulares
+
+Route::view('/galeria', 'pagGaleria', ['valor' => 15]) -> name('xGaleria');
+
+Route::get('/lista', function () {
+    return view('paglista');
+}) -> name('xLista');
+
+//////////////////////////////////////////////////////
 
 Route::get('/dashboard', function () {
     return view('dashboard');
