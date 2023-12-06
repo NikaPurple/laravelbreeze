@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 
 Route::get('/', [PagesController::class, 'fnIndex']) -> name('xIndex');
+Route::post('/', [PagesController::class, 'fnRegistrar']) -> name('Estudiante.xRegistrar');
 
 Route::get( '/detalle/{id}', [PagesController::class, 'fnEstDetalle'] )->name('Estudiante.xDetalle');
 
