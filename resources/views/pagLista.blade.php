@@ -1,7 +1,9 @@
 @extends('pagPlantilla')
 
 @section('titulo')
-    <h1 class="display-4"> Página lista </h1>
+    <h1 class="display-4"> Página lista</h1>
+    <h3> Nicole Sara Cabrera Camargo</h3>
+    <h5> Computación e Informatica</h5>
 @endsection
 
 @section('seccion')
